@@ -62,7 +62,8 @@
             android:id="@+id/bt_begin"
             android:layout_width="220dp"
             android:layout_height="48dp"
-            android:background="@drawable/custom_button"
+            android:background="@color/turquoise"
+            android:elevation="4dp"
             android:text="НАЧАТЬ"
             android:textAlignment="center"
             android:textColor="@android:color/black" />
