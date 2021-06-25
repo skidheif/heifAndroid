@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glOrderBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glOrderEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96107054" />
+
+        <TextView
+            android:id="@+id/tvOrderOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="online"
+            android:textColor="#262633"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/glOrderBegin"
+            app:layout_constraintTop_toTopOf="@id/clParent" />
+
+        <TextView
+            android:id="@+id/tvOrderSwiftbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="switbook"
+            android:textAllCaps="true"
+            android:textColor="#262633"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/glOrderBegin"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderOnline" />
+
+        <ImageView
+            android:id="@+id/ivOrderCircleImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_circle"
+            app:layout_constraintStart_toEndOf="@id/tvOrderSwiftbook"
+            app:layout_constraintTop_toTopOf="@id/tvOrderOnline" />
+
+        <ImageView
+            android:id="@+id/ivOrderCrossButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cross_button"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrderSwiftbook"
+            app:layout_constraintEnd_toEndOf="@id/glOrderEnd"
+            app:layout_constraintTop_toTopOf="@id/ivOrderCircleImage" />
+
+        <TextView
+            android:id="@+id/tvOrderBin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Корзина"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/glOrderBegin"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderSwiftbook" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderBin"
+
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/tom_yam" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
