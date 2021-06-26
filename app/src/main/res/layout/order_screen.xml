@@ -105,7 +105,7 @@
 
             <TextView
                 android:id="@+id/tvOrderFoodName"
-                android:layout_width="wrap_content"
+                android:layout_width="212dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
@@ -381,7 +381,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/clOrderByCard"
+                android:id="@+id/clOrderByCardAndCash"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/clOrderBySelf">
@@ -390,56 +390,49 @@
                     android:id="@+id/tvOrderByCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto"
                     android:text="Оплата картой"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/clOrderByCard"
-                    app:layout_constraintStart_toStartOf="@id/clOrderByCard"
-                    app:layout_constraintTop_toTopOf="@id/clOrderByCard" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    app:layout_constraintBottom_toBottomOf="@id/clOrderByCard"
-                    app:layout_constraintEnd_toEndOf="@id/clOrderByCard"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@id/tvOrderByCard"
-                    app:layout_constraintTop_toTopOf="@id/clOrderByCard" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/clOrderByCash"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/clOrderByCard">
+                    app:layout_constraintBottom_toTopOf="@id/tvOrderByCash"
+                    app:layout_constraintStart_toStartOf="@id/clOrderByCardAndCash"
+                    app:layout_constraintTop_toTopOf="@id/clOrderByCardAndCash" />
 
                 <TextView
                     android:id="@+id/tvOrderByCash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="12dp"
                     android:fontFamily="@font/roboto"
                     android:text="Оплата наличными"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/clOrderByCash"
-                    app:layout_constraintStart_toStartOf="@id/clOrderByCash"
-                    app:layout_constraintTop_toTopOf="@id/clOrderByCash" />
+                    app:layout_constraintBottom_toBottomOf="@id/clOrderByCardAndCash"
+                    app:layout_constraintStart_toStartOf="@id/clOrderByCardAndCash"
+                    app:layout_constraintTop_toBottomOf="@id/tvOrderByCard" />
 
-                <RadioButton
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="@id/clOrderByCash"
-                    app:layout_constraintEnd_toEndOf="@id/clOrderByCash"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@id/tvOrderByCash"
-                    app:layout_constraintTop_toTopOf="@id/clOrderByCash" />
+                    app:layout_constraintEnd_toEndOf="@id/clOrderByCardAndCash"
+                    app:layout_constraintTop_toTopOf="@id/clOrderByCardAndCash">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
+                        android:checked="false" />
+                </RadioGroup>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -448,16 +441,16 @@
                 android:layout_width="220dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="48dp"
+                android:layout_marginBottom="24dp"
                 android:background="@color/turquoise"
                 android:elevation="4dp"
                 android:text="Заказать"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@id/clEndBlock"
                 app:layout_constraintEnd_toEndOf="@id/clEndBlock"
                 app:layout_constraintStart_toStartOf="@id/clEndBlock"
-                app:layout_constraintTop_toBottomOf="@id/clOrderByCash"
-                app:layout_constraintBottom_toBottomOf="@id/clEndBlock"
-                android:layout_marginBottom="24dp"/>
+                app:layout_constraintTop_toBottomOf="@id/clOrderByCardAndCash" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
