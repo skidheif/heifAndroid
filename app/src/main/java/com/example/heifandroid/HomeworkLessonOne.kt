@@ -1,18 +1,14 @@
 package com.example.heifandroid
 
-import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class HomeworkLessonOne {
+    fun homeWork() {
 
         val randomNumber: Int = generateRandomNumber();
         Log.d("kotlinHomeworkOne", "Random number is - $randomNumber")
 
-        val circleArea: Int = (Math.PI * (randomNumber * randomNumber)).toInt()
+        val circleArea: Double = (Math.PI * (randomNumber * randomNumber))
         Log.d("kotlinHomeworkOne", "Circle area is - $circleArea")
 
         val squareArea: Int = randomNumber * randomNumber
@@ -26,8 +22,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun generateRandomNumber(): Int {
-        val startRandomRange: Int = 0
-        val endRandomRange: Int = 10;
+        val startRandomRange = 1
+        val endRandomRange = 10
         return (startRandomRange..endRandomRange).random()
     }
 }
