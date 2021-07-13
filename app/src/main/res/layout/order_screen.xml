@@ -25,7 +25,7 @@
             app:layout_constraintGuide_end="16dp" />
 
         <TextView
-            android:id="@+id/tvOrderOnline"
+            android:id="@+id/tvTitleFirstPart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -47,7 +47,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/glOrderBegin"
-            app:layout_constraintTop_toBottomOf="@id/tvOrderOnline" />
+            app:layout_constraintTop_toBottomOf="@id/tvTitleFirstPart" />
 
         <ImageView
             android:id="@+id/ivOrderCircleImage"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/order_circle"
             app:layout_constraintStart_toEndOf="@id/tvOrderSwiftbook"
-            app:layout_constraintTop_toTopOf="@id/tvOrderOnline" />
+            app:layout_constraintTop_toTopOf="@id/tvTitleFirstPart" />
 
         <ImageView
             android:id="@+id/ivOrderCrossButton"
@@ -85,7 +85,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/edit_cl_layout_border_color"
-            android:elevation="10dp"
+            android:elevation="6dp"
+            android:translationZ="4dp"
             app:layout_constraintEnd_toStartOf="@id/glOrderEnd"
             app:layout_constraintStart_toEndOf="@id/glOrderBegin"
             app:layout_constraintTop_toBottomOf="@id/tvOrderBin"
@@ -105,7 +106,7 @@
 
             <TextView
                 android:id="@+id/tvOrderFoodName"
-                android:layout_width="212dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
@@ -131,14 +132,20 @@
 
             <TextView
                 android:id="@+id/tvOrderFoodPrice"
-                android:layout_width="54dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
                 android:background="@drawable/edit_text_background_with_corner_radius"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
                 android:text="470 ₽"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCount"
-                app:layout_constraintEnd_toEndOf="@id/tvOrderFoodName" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFood" />
 
             <ImageView
                 android:id="@+id/ivOrderCrossButtonInFood"
@@ -155,12 +162,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clFoodItem2"
+            android:id="@+id/clFoodItemTwo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edit_cl_layout_border_color"
-            android:elevation="10dp"
+            android:elevation="6dp"
+            android:translationZ="4dp"
             app:layout_constraintEnd_toStartOf="@id/glOrderEnd"
             app:layout_constraintStart_toEndOf="@id/glOrderBegin"
             app:layout_constraintTop_toBottomOf="@id/clFoodItem"
@@ -174,57 +182,63 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/filadelfia"
-                app:layout_constraintBottom_toBottomOf="@id/clFoodItem2"
-                app:layout_constraintStart_toStartOf="@id/clFoodItem2"
-                app:layout_constraintTop_toTopOf="@id/clFoodItem2" />
+                app:layout_constraintBottom_toBottomOf="@id/clFoodItemTwo"
+                app:layout_constraintStart_toStartOf="@id/clFoodItemTwo"
+                app:layout_constraintTop_toTopOf="@id/clFoodItemTwo" />
 
             <TextView
-                android:id="@+id/tvOrderFoodName2"
-                android:layout_width="212dp"
+                android:id="@+id/tvOrderFoodNameTwo"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
                 android:text="Сет Запеченая филадел..."
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/tvOrderFoodCount2"
+                app:layout_constraintBottom_toTopOf="@+id/tvOrderFoodCountTwo"
                 app:layout_constraintStart_toEndOf="@+id/ivFila"
-                app:layout_constraintTop_toTopOf="@id/clFoodItem2"
+                app:layout_constraintTop_toTopOf="@id/clFoodItemTwo"
                 app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
-                android:id="@+id/tvOrderFoodCount2"
+                android:id="@+id/tvOrderFoodCountTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="Кол-во: 1 шт"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@id/clFoodItem2"
-                app:layout_constraintStart_toStartOf="@id/tvOrderFoodName2"
-                app:layout_constraintTop_toBottomOf="@+id/tvOrderFoodName2" />
+                app:layout_constraintBottom_toBottomOf="@id/clFoodItemTwo"
+                app:layout_constraintStart_toStartOf="@id/tvOrderFoodNameTwo"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderFoodNameTwo" />
 
             <TextView
-                android:id="@+id/tvOrderFoodPrice2"
-                android:layout_width="54dp"
-                android:layout_height="20dp"
+                android:id="@+id/tvOrderFoodPriceTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
                 android:background="@drawable/edit_text_background_with_corner_radius"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
                 android:text="470 ₽"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCount2"
-                app:layout_constraintEnd_toEndOf="@id/tvOrderFoodName2" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCountTwo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFoodTwo"/>
 
             <ImageView
-                android:id="@+id/ivOrderCrossButtonInFood2"
+                android:id="@+id/ivOrderCrossButtonInFoodTwo"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:src="@drawable/ic_cross_button"
-                app:layout_constraintBottom_toBottomOf="@id/clFoodItem2"
-                app:layout_constraintEnd_toEndOf="@id/clFoodItem2"
+                app:layout_constraintBottom_toBottomOf="@id/clFoodItemTwo"
+                app:layout_constraintEnd_toEndOf="@id/clFoodItemTwo"
                 app:layout_constraintHorizontal_bias="0.75"
-                app:layout_constraintStart_toEndOf="@id/tvOrderFoodName2"
-                app:layout_constraintTop_toTopOf="@id/clFoodItem2"
+                app:layout_constraintStart_toEndOf="@id/tvOrderFoodNameTwo"
+                app:layout_constraintTop_toTopOf="@id/clFoodItemTwo"
                 app:tint="#A1A1A1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -235,10 +249,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edit_cl_layout_border_color"
-            android:elevation="10dp"
+            android:elevation="6dp"
+            android:translationZ="4dp"
             app:layout_constraintEnd_toStartOf="@id/glOrderEnd"
             app:layout_constraintStart_toEndOf="@id/glOrderBegin"
-            app:layout_constraintTop_toBottomOf="@id/clFoodItem2"
+            app:layout_constraintTop_toBottomOf="@id/clFoodItemTwo"
             tools:layout_editor_absoluteX="16dp">
 
             <ImageView
@@ -255,7 +270,7 @@
 
             <TextView
                 android:id="@+id/tvOrderFoodName3"
-                android:layout_width="212dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
@@ -281,14 +296,20 @@
 
             <TextView
                 android:id="@+id/tvOrderFoodPrice3"
-                android:layout_width="54dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
                 android:background="@drawable/edit_text_background_with_corner_radius"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
                 android:text="470 ₽"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCount3"
-                app:layout_constraintEnd_toEndOf="@id/tvOrderFoodName3" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFood3"/>
 
             <ImageView
                 android:id="@+id/ivOrderCrossButtonInFood3"
@@ -332,7 +353,7 @@
                 android:backgroundTint="@android:color/black"
                 android:gravity="top"
                 android:hint="@string/hint"
-                android:minHeight="162dp"
+                android:minLines="5"
                 android:textColorHint="#808080"
                 app:layout_constraintTop_toBottomOf="@id/tvOrderComment" />
 
@@ -423,7 +444,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:checked="true" />
+                        android:checked="false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
