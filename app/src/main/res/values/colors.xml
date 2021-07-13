@@ -6,4 +6,7 @@
     <color name="white">#ffffff</color>
     <color name="turquoise">#27e8ab</color>
     <color name="roman">#DE6758</color>
+
+    <!--Switch Color-->
+    <color name="switch_color">#27E8AB</color>
 </resources>
