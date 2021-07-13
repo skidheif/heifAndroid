@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
-                android:text="Сет Запеченая филадел..."
+                android:text="Сет Запеченая филаделфия"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/tvOrderFoodCountTwo"

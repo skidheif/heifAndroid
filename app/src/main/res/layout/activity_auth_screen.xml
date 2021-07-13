@@ -43,7 +43,7 @@
             android:ems="10"
             android:inputType="number"
             android:paddingLeft="12dp"
-            app:mask=" +7 *** *** ****"
+            app:mask=" +7 *** *** ** **"
             app:notMaskedSymbol="*" />
 
     </LinearLayout>
