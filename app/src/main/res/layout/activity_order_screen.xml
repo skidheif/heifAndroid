@@ -78,18 +78,30 @@
             app:layout_constraintStart_toEndOf="@id/glOrderBegin"
             app:layout_constraintTop_toBottomOf="@id/tvOrderSwiftbook" />
 
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/clFoodItem"
+            app:layout_constraintStart_toEndOf="@+id/glOrderBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderBin" />
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clFoodItem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/edit_cl_layout_border_color"
             android:elevation="6dp"
             android:translationZ="4dp"
             app:layout_constraintEnd_toStartOf="@id/glOrderEnd"
             app:layout_constraintStart_toEndOf="@id/glOrderBegin"
-            app:layout_constraintTop_toBottomOf="@id/tvOrderBin"
+            app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
             tools:layout_editor_absoluteX="16dp">
 
             <ImageView
@@ -227,7 +239,7 @@
                 android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCountTwo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFoodTwo"/>
+                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFoodTwo" />
 
             <ImageView
                 android:id="@+id/ivOrderCrossButtonInFoodTwo"
@@ -309,7 +321,7 @@
                 android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderFoodCount3"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFood3"/>
+                app:layout_constraintEnd_toStartOf="@id/ivOrderCrossButtonInFood3" />
 
             <ImageView
                 android:id="@+id/ivOrderCrossButtonInFood3"
@@ -474,7 +486,6 @@
                 app:layout_constraintTop_toBottomOf="@id/clOrderByCardAndCash" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

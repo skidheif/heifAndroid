@@ -21,8 +21,8 @@ class OrderScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_screen)
-        val tvOrderBin = findViewById<TextView>(R.id.tvOrderBin)
-        tvOrderBin.text =
-            "Phone number from auth screen is:" + "\n" + intent.getStringExtra(PHONE_NUMBER_KEY)
+        val tvPhoneNumber = findViewById<TextView>(R.id.tvPhoneNumber)
+        tvPhoneNumber.text =
+            "Phone number from auth screen is:" + intent.getStringExtra(PHONE_NUMBER_KEY)
     }
 }
