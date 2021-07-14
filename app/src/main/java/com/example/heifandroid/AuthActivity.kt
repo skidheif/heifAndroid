@@ -1,6 +1,5 @@
 package com.example.heifandroid
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -25,7 +24,3 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 }
-
-//По ранее сверстанным страницам сделать активности
-// и реализовать переходы между ними и передачу данных
-//Активити логина -> Активити страница корзины, передать номер телефона и отобразить в корзине
