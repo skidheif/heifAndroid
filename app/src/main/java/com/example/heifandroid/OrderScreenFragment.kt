@@ -23,6 +23,7 @@ class OrderScreenFragment : Fragment() {
     private var phoneNumber: String? = null
     private lateinit var binding: FragmentOrderScreenBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,5 +37,12 @@ class OrderScreenFragment : Fragment() {
         super.onCreate(savedInstanceState)
         phoneNumber = arguments?.getString(PHONE_NUMBER_KEY)
         binding.tvPhoneNumber.text = "Phone number: $phoneNumber"
+        configureFoodItemInfoClick()
+    }
+
+    private fun configureFoodItemInfoClick() {
+        binding.clFoodItem.setOnClickListener {
+            FoodItemInfoFragment().show(childFragmentManager, "FoodItemInfoFragment")
+        }
     }
 }

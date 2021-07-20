@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clFoodItemInfoParent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="615dp"
     android:background="@android:color/white"
-    tools:context=".FoodItemInformationFragment">
+    tools:context=".FoodItemInfoFragment">
 
     <RelativeLayout
         android:id="@+id/rlFoodItemInfoImages"
@@ -91,6 +91,7 @@
             android:id="@+id/llFoodItemInfoCountBlock"
             android:layout_width="135dp"
             android:layout_height="48dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/button_border_color"
             android:orientation="horizontal">
 
