@@ -35,6 +35,6 @@ class OrderScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         phoneNumber = arguments?.getString(PHONE_NUMBER_KEY)
-        "Phone number: $phoneNumber".also { binding.tvPhoneNumber.text = it }
+        binding.tvPhoneNumber.text = "Phone number: $phoneNumber"
     }
 }
