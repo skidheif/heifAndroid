@@ -2,4 +2,9 @@
     <string name="app_name">heifAndroid</string>
     <string name="terms_of_use">Авторизуясь я соглашаюсь с <u>условиями использования</u></string>
     <string name="hint"><font size="14">Укажите дополнительную информацию \nк заказу</font></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tom_yam_desciption">Бульон из пряного говяжьего мясного супа с\n
+        кокосовым молоком,грибами, томатами,\n
+        зеленью. Подается с добавками на выбор,\n
+        отварным белым рисом или рисовой\n вермишелью на выбор</string>
 </resources>
