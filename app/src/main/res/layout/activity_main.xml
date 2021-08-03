@@ -61,9 +61,27 @@
         app:tabTextAppearance="@style/tab_layout_custom_style" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpMain"
+        android:id="@+id/vpMainFirst"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btvMain"
         app:layout_constraintTop_toBottomOf="@id/tbMain" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMainSecond"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btvMain"
+        app:layout_constraintTop_toBottomOf="@id/tbMain" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btvMain"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/gray14"
+        app:itemIconTint="@color/bottom_navigation_colors"
+        app:itemTextColor="@color/bottom_navigation_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
