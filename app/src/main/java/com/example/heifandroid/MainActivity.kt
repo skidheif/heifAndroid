@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         vpMainFirst.isUserInputEnabled = false
 
         vpMainSecond.adapter = ViewPagerAdapter(this).apply {
-            addFoodFragment(FoodItemFragmentFourth())
-            addFoodFragment(FoodItemFragmentFifth())
-            addFoodFragment(FoodItemFragmentSixth())
+            addFoodFragment(FoodItemFragmentThird())
+            addFoodFragment(FoodItemFragmentSecond())
+            addFoodFragment(FoodItemFragmentFirst())
         }
         vpMainSecond.isUserInputEnabled = false
 
