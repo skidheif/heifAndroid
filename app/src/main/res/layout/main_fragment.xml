@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kotlinHomeWork.HomeworkLessonOne">
+
+    <TextView
+        android:id="@+id/tvFoodTabFirstPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="online"
+        android:textColor="#262633"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFoodTabSecondPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="switbook"
+        android:textAllCaps="true"
+        android:textColor="#262633"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodTabFirstPart" />
+
+    <ImageView
+        android:id="@+id/ivFoodTabCircleImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_food_tab_circle"
+        app:layout_constraintStart_toEndOf="@id/tvFoodTabSecondPart"
+        app:layout_constraintTop_toTopOf="@id/tvFoodTabFirstPart" />
+
+    <ImageView
+        android:id="@+id/ivBucketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_food_tab_basket"
+        app:layout_constraintBottom_toBottomOf="@id/tvFoodTabSecondPart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFoodTabCircleImage" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodTabSecondPart"
+        app:tabTextAppearance="@style/tab_layout_custom_style" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMainFirst"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btvMain"
+        app:layout_constraintTop_toBottomOf="@id/tbMain" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMainSecond"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btvMain"
+        app:layout_constraintTop_toBottomOf="@id/tbMain" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btvMain"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/gray14"
+        app:itemIconTint="@color/bottom_navigation_colors"
+        app:itemTextColor="@color/bottom_navigation_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>
