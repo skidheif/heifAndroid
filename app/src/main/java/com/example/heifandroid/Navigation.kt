@@ -1,5 +1,6 @@
 package com.example.heifandroid
 
 interface Navigation {
-    fun openFoodFragmentFirst()
+     fun openWelcomeFragment()
+     fun openFoodFragmentFirst()
 }
