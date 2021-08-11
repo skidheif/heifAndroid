@@ -36,7 +36,7 @@ class MainFragment : Fragment() {
         }
         vpMainFirst.isUserInputEnabled = false
 
-        vpMainSecond.adapter = ViewPagerAdapter(this).apply {
+        binding.vpMainSecond.adapter = ViewPagerAdapter(this).apply {
             addFoodFragment(FoodItemFragmentThird())
             addFoodFragment(FoodItemFragmentSecond())
             addFoodFragment(FoodItemFragmentFirst())

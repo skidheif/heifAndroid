@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         btnWelcomeBegin.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.clMainFragment, MainFragment())
+                .add(R.id.clMain, MainFragment())
                 .commit()
         }
     }
