@@ -5,18 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.example.heifandroid.databinding.MainFragmentBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainFragment : Fragment() {
 
     lateinit var binding: MainFragmentBinding
-    lateinit var vpMainFirst: ViewPager2
-    lateinit var vpMainSecond: ViewPager2
-    lateinit var btvMain: BottomNavigationView
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,36 +28,40 @@ class MainFragment : Fragment() {
             addFoodFragment(FoodItemFragmentSecond())
             addFoodFragment(FoodItemFragmentThird())
         }
-        vpMainFirst.isUserInputEnabled = false
+        binding.vpMainFirst.isUserInputEnabled = false
 
         binding.vpMainSecond.adapter = ViewPagerAdapter(this).apply {
             addFoodFragment(FoodItemFragmentThird())
             addFoodFragment(FoodItemFragmentSecond())
             addFoodFragment(FoodItemFragmentFirst())
         }
-        vpMainSecond.isUserInputEnabled = false
+        binding.vpMainSecond.isUserInputEnabled = false
 
         val foodTabNames = listOf("Всё", "Фаст-фуд", "Десерты")
 
-        TabLayoutMediator(binding.tbMain, vpMainFirst) { tab, position ->
+        TabLayoutMediator(binding.tbMain, binding.vpMainFirst) { tab, position ->
             tab.text = foodTabNames[position]
         }.attach()
 
-        TabLayoutMediator(binding.tbMain, vpMainSecond) { tab, position ->
+        TabLayoutMediator(binding.tbMain, binding.vpMainSecond) { tab, position ->
             tab.text = foodTabNames[position]
         }.attach()
 
-        btvMain.setOnItemSelectedListener { item ->
+        binding.btvMain.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.itMenu -> {
-                    vpMainFirst.visibility = View.VISIBLE
-                    vpMainSecond.visibility = View.INVISIBLE;
-                    vpMainFirst.currentItem = 0
+                    with(binding.vpMainFirst) {
+                        visibility = View.VISIBLE
+                        visibility = View.INVISIBLE;
+                        currentItem = 0
+                    }
                 }
                 R.id.itFavourite -> {
-                    vpMainSecond.currentItem = 0
-                    vpMainFirst.visibility = View.INVISIBLE
-                    vpMainSecond.visibility = View.VISIBLE;
+                    with(binding.vpMainSecond) {
+                        currentItem = 0
+                        visibility = View.INVISIBLE
+                        visibility = View.VISIBLE
+                    }
                 }
             }
             true
