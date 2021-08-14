@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.heifandroid.SharedPrefHelper.Companion.SP_WELCOME_BUTTON_CLICKED
+import com.example.heifandroid.SharedPrefHelper.Companion.putBoolean
 import com.example.heifandroid.databinding.MainFragmentBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -65,6 +68,16 @@ class MainFragment : Fragment() {
                 }
             }
             true
+        }
+        returnSharedPrefToFalse()
+    }
+
+
+    private fun returnSharedPrefToFalse() {
+        binding.ivBasketButton.setOnClickListener {
+            putBoolean(SP_WELCOME_BUTTON_CLICKED, false)
+            Toast.makeText(requireContext(), "SP for welcome button = false", Toast.LENGTH_LONG)
+                .show()
         }
     }
 }
