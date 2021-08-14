@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">heifAndroid</string>
     <string name="terms_of_use">Авторизуясь я соглашаюсь с <u>условиями использования</u></string>
+    <string name="tom_yam_desciption">Бульон из пряного говяжьего мясного супа с\nкокосовым молоком,грибами, томатами,\nзеленью. Подается с добавками на выбор,\nотварным белым рисом или рисовой\nвермишелью на выбор</string>
+    <string name="philadelfia_desciption">Лосось, огурец, авокадо, кунжут, \nсыр, зеленый лук, 6 шт</string>
+    <string name="croissan_desciption">Нежный бисквит с грецкими \nорехами и ноткой корицы, и нежным кремом</string>
 </resources>

@@ -25,6 +25,13 @@ class FoodItemFragmentFirst : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rvDishes.adapter = DishesAdapter(generateDish())
         binding.rvDishes.layoutManager = LinearLayoutManager(requireContext())
+        configureFoodItemInfoClick()
+    }
+
+    private fun configureFoodItemInfoClick() {
+        binding.rvDishes.setOnClickListener {
+//            FoodItemFragmentFirst().show(childFragmentManager, "FoodItemInfoFragment")
+        }
     }
 
     private fun generateDish(): List<Dish> {
