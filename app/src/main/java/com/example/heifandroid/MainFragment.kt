@@ -70,6 +70,21 @@ class MainFragment : Fragment() {
             true
         }
         returnSharedPrefToFalse()
+
+        DataBaseHolder.initDatabase(requireContext())
+        val database = DataBaseHolder.instance
+        database.execSQL(
+            "CREATE TABLE IF NOT EXISTS dishes" +
+                    "(id INTEGER PRIMARY KEY, name TEXT, " +
+                    "description TEXT, calorieContent TEXT, " +
+                    "price INTEGER, image BLOB)"
+        )
+        database.execSQL(
+            "CREATE TABLE IF NOT EXISTS users" +
+                    "(id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "phoneNumber INTEGER," +
+                    "dishesLikes INTEGER)"
+        )
     }
 
 

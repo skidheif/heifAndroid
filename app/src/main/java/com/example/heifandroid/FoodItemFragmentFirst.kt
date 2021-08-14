@@ -25,14 +25,15 @@ class FoodItemFragmentFirst : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rvDishes.adapter = DishesAdapter(generateDish())
         binding.rvDishes.layoutManager = LinearLayoutManager(requireContext())
-        configureFoodItemInfoClick()
+//        configureFoodItemInfoClick()
     }
 
-    private fun configureFoodItemInfoClick() {
-        binding.rvDishes.setOnClickListener {
-//            FoodItemFragmentFirst().show(childFragmentManager, "FoodItemInfoFragment")
-        }
-    }
+    //TODO попросить Рустема рассказать про то, как в recycler view работать с элементами внтури
+//    private fun configureFoodItemInfoClick() {
+//        binding.rvDishes.layoutManager?.getChildAt(0)?.setOnClickListener {
+//            FoodItemInfoFragmentFirst().show(childFragmentManager, "FoodItemInfoFragmentFirst")
+//        }
+//    }
 
     private fun generateDish(): List<Dish> {
         return listOf(
