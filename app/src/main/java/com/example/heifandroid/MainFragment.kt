@@ -87,6 +87,10 @@ class MainFragment : Fragment() {
         )
     }
 
+    fun openFoodItemInfoFragmentFirst() {
+        FoodItemInfoFragmentFirst().show(childFragmentManager, "FoodItemInfoFragmentFirst")
+    }
+
 
     private fun returnSharedPrefToFalse() {
         binding.ivBasketButton.setOnClickListener {
