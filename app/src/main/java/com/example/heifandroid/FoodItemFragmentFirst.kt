@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.heifandroid.databinding.FoodItemFragmentFirstBinding
 
@@ -23,7 +24,7 @@ class FoodItemFragmentFirst : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvDishes.adapter = DishesAdapter(generateDish())
+        binding.rvDishes.adapter = DishesAdapter(generateDish(),Fragment????)
         binding.rvDishes.layoutManager = LinearLayoutManager(requireContext())
     }
 

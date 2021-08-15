@@ -3,10 +3,12 @@ package com.example.heifandroid
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heifandroid.databinding.ItemDishBinding
 
-class DishesAdapter(val dishes: List<Dish>) : RecyclerView.Adapter<DishViewHolder>() {
+class DishesAdapter(val dishes: List<Dish>, val manager: FragmentManager) :
+    RecyclerView.Adapter<DishViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DishViewHolder {
         val inflater: LayoutInflater = LayoutInflater.from(parent.context)
@@ -30,7 +32,13 @@ class DishesAdapter(val dishes: List<Dish>) : RecyclerView.Adapter<DishViewHolde
         }
         if (dishes[position].price == 235)
             holder.binding.root.setOnClickListener {
-                MainFragment().openFoodItemInfoFragmentFirst()
+                openFoodItemInfoFragmentFirst()
             }
+    }
+
+    fun openFoodItemInfoFragmentFirst() {
+        manager.beginTransaction()
+            .show(FoodItemInfoFragmentFirst())
+            .commit()
     }
 }
